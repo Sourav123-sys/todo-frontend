@@ -16,10 +16,11 @@ const Home = () => {
         const name = data.name;
         const details = data.details;
         const date = data.date;
-        const email = user.email
-        const tasks = { name, details,date,email }
+        const email = user?.email
+        const tasks = { name, details, date, email }
+        console.log(tasks,"tasks")
         if (user) {
-            fetch('http://localhost:4000/tasks', {
+            fetch('https://todo-f16t.onrender.com/tasks', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -29,7 +30,7 @@ const Home = () => {
             .then(res => res.json())
             .then(data => {
                 console.log('success', data)
-                toast.success('Item added successfully')
+                toast.success('Todo added successfully')
             })
         reset()
         } else {
@@ -117,7 +118,7 @@ const Home = () => {
                     </div>
 
                    
-                    <input className='btn w-full max-w-xs btn-secondary text-green-800 font-bold border-green-500 mb-5 text-lg mt-5 text-center' type="submit" value="ADD" />
+                    <input className='btn w-32 bg-slate-300 max-w-xs btn-secondary text-green-800 font-bold border-green-500 mb-5 text-lg mt-5 text-center' type="submit" value="ADD" />
                 </form>
             </div>
         </div>

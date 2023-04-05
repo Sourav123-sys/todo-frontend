@@ -20,7 +20,7 @@ const ListDetails = () => {
             if (confirmMsg) {
                 
                 
-                fetch(`http://localhost:4000/task/${id}`, {
+                fetch(`https://todo-f16t.onrender.com/task/${id}`, {
                     method: 'DELETE',
     
                 })

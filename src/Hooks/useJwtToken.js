@@ -15,7 +15,7 @@ const useJwtToken = user => {
             const currentUser = { email: email, name: name, img: img }
             // console.log({ email });
             if (email) {
-                fetch(`http://localhost:4000/user/${email}`, {
+                fetch(`https://todo-f16t.onrender.com/user/${email}`, {
                     method: 'PUT',
                     headers: {
                         'content-type': 'application/json'

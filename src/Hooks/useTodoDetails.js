@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 const useTodoDetails = (id) => {
     const [todoDetails, setTodoDetails] = useState([]);  
     useEffect(() => {
-           const url = `http://localhost:4000/tasks/${id}`
+           const url = `https://todo-f16t.onrender.com/tasks/${id}`
           
             fetch(url)
             .then(response => response.json())

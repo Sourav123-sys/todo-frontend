@@ -20,7 +20,7 @@ const UpdateTodo = () => {
         const updatedTask = { name, details, date }
         console.log(updatedTask)
         if (user) {
-            fetch(`http://localhost:4000/update/${id}`, {
+            fetch(`https://todo-f16t.onrender.com/update/${id}`, {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json'
